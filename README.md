@@ -43,6 +43,11 @@ E-Mail : rsababkar@gmail.com
 
 # Special Thanks To :
 
+<details> 
+  <summary>P.Khalegi :</summary>
+   Telegram : @Parisa_Khaleghi
+</details>
+
 DMF313.ir 👇
 
 [<img src="https://dmf313.ir/wp-content/uploads/2020/05/AdminAvatar.png" width="300"/>](https://dmf313.ir/)
