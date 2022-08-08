@@ -23,3 +23,6 @@ a AVR Project with HC-05 bluetooth module
 در خط 30 و 31 از رشته y به متغیر x به طول 12 کپی میکنیم , حالا شاید بپرسید چرا در همان x با gets(x , 12) انجام ندادیم به این دلیل که بعضی از برنامه های بلوتوث ترمینال ممکن است از لاین اندینگ CR یا LF یا CR-LF استفاده کند و در آخر هر دستور یک /n و یک /r بفرستند و به همین دلیل Unknown Command برگرده به موبایل.
 
 در شرط ها هم ما با استفاده از تابع strcmp چک میکنیم که مثلا آیا x برابر Turn On Blue بود Blue رو روشن کن و Red و Green رو خاموش.
+
+# Shematic
+<img src="https://github.com/Reza-Skar/AVR_With_HC-05/blob/main/images/Shematic.png?raw=true"/>
