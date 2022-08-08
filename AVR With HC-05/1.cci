@@ -1,0 +1,11 @@
+VERSION:3 SOURCE_TIMESTAMP:54E66E90
+NODE:I LEVEL:0 LINE:1 "G:\codevision\inc\mega8.h"
+NODE:I LEVEL:0 LINE:2 "G:\codevision\inc\alcd.h"
+NODE:I LEVEL:0 LINE:3 "G:\codevision\inc\stdio.h"
+NODE:I LEVEL:0 LINE:4 "G:\codevision\inc\delay.h"
+NODE:I LEVEL:0 LINE:5 "G:\codevision\inc\string.h"
+NODE:M LEVEL:0 LINE:7 "RED"
+NODE:M LEVEL:0 LINE:8 "GREEN"
+NODE:M LEVEL:0 LINE:9 "BLUE"
+NODE:M LEVEL:0 LINE:10 "Relay"
+NODE:F LEVEL:0 LINE:12 "main(void)"

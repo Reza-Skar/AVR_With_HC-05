@@ -1,0 +1,168 @@
+#include <mega8.h>
+#include <alcd.h>
+#include <stdio.h>
+#include <delay.h>
+#include <string.h>
+
+#define RED     PORTC.1
+#define GREEN   PORTC.3
+#define BLUE    PORTC.4
+#define Relay   PORTC.0
+
+void main(void)
+{
+unsigned char x[13];
+unsigned char y[20];
+// Port B initialization : Bit7=Out Bit6=Out Bit5=Out Bit4=Out Bit3=Out Bit2=Out Bit1=Out Bit0=Out 
+DDRB=(1<<DDB7) | (1<<DDB6) | (1<<DDB5) | (1<<DDB4) | (1<<DDB3) | (1<<DDB2) | (1<<DDB1) | (1<<DDB0);
+PORTB=(0<<PORTB7) | (0<<PORTB6) | (0<<PORTB5) | (0<<PORTB4) | (0<<PORTB3) | (0<<PORTB2) | (0<<PORTB1) | (0<<PORTB0);
+
+DDRC=(1<<DDC5) | (1<<DDC4) | (1<<DDC3) | (1<<DDC2) | (1<<DDC1) | (1<<DDC0);
+PORTC=(0<<PORTC5) | (0<<PORTC4) |(0<<PORTC3) | (0<<PORTC2) | (0<<PORTC1) | (0<<PORTC0);
+
+
+UCSRA=(0<<RXC) | (0<<TXC) | (0<<UDRE) | (0<<FE) | (0<<DOR) | (0<<UPE) | (0<<U2X) | (0<<MPCM);
+UCSRB=(0<<RXCIE) | (0<<TXCIE) | (0<<UDRIE) | (1<<RXEN) | (1<<TXEN) | (0<<UCSZ2) | (0<<RXB8) | (0<<TXB8);
+UCSRC=(1<<URSEL) | (0<<UMSEL) | (0<<UPM1) | (0<<UPM0) | (0<<USBS) | (1<<UCSZ1) | (1<<UCSZ0) | (0<<UCPOL);
+UBRRH=0x00;
+UBRRL=0x33;
+
+
+// Project|Configure|C Compiler|Libraries|Alphanumeric LCD menu:
+// RS - PORTB Bit 0
+// RD - PORTB Bit 1
+// EN - PORTB Bit 2
+// D4 - PORTB Bit 4
+// D5 - PORTB Bit 5
+// D6 - PORTB Bit 6
+// D7 - PORTB Bit 7
+// Characters/line: 16
+lcd_init(16);
+
+
+PORTC.2 = 1;
+
+lcd_gotoxy(0,0);
+lcd_puts("    RezaSkar    "); 
+delay_ms(2000);
+lcd_clear();
+         
+while (1)
+      {
+        gets(y,20);    
+        strncpy(x,y,12);   
+        x[12] = '\0';
+        if (strcmp(x,"R.S.KAR Open") == 0)
+        {
+            printf("Door Openning");
+            //lcd_clear();
+            //lcd_puts("Door Openning");
+            Relay = 1;
+            delay_ms(300);
+            Relay = 0;
+        }    
+        else
+        {
+            if (strcmp(x,"Turn On Red.") == 0)
+            {
+                RED = 0;
+                BLUE = 1;
+                GREEN = 1;   
+                //lcd_clear();
+                //lcd_puts("Red Led Turned On");
+                printf("Red Led Turned On");
+            }
+            else
+            {
+                if (strcmp(x,"Turn On Blue") == 0)
+                {
+                    RED = 1;
+                    BLUE = 0;
+                    GREEN = 1;  
+                    //lcd_clear();
+                    //lcd_puts("Blue Led Turned On");
+                    printf("Blue Led Turned On");
+                }  
+                else
+                {
+                    if (strcmp(x,"TurnOn Green") == 0)
+                    {
+                        RED = 1;
+                        BLUE = 1;
+                        GREEN = 0;
+                        //lcd_clear();
+                        //lcd_puts("Green Led Turned On");
+                        printf("Green Led Turned On");
+                    } 
+                    else
+                    {
+                        if (strcmp(x,"Turn On Cyan") == 0)
+                        {
+                            RED = 1;
+                            BLUE = 0;
+                            GREEN = 0; 
+                            //lcd_clear();
+                            //lcd_puts("Cyan Led Turned On");
+                            printf("Cyan Led Turned On");
+                        } 
+                        else
+                        {
+                            if (strcmp(x,"Turn Off Led") == 0)
+                            {
+                                RED = 1;
+                                BLUE = 1;
+                                GREEN = 1; 
+                                //lcd_clear();
+                                //lcd_puts("Leds Turned Off !");
+                                printf("Leds Turned Off !");
+                            }
+                            else
+                            {
+                                if (strcmp(x,"TurnOnPurple") == 0)
+                                {
+                                    RED = 0;
+                                    BLUE = 0;
+                                    GREEN = 1; 
+                                    //lcd_clear();
+                                    //lcd_puts("Purple Led Turned On");
+                                    printf("Purple Led Turned On");
+                                }
+                                else
+                                {
+                                    if (strcmp(x,"TurnOn White") == 0)
+                                    {
+                                        RED = 0;
+                                        BLUE = 0;
+                                        GREEN = 0; 
+                                        //lcd_clear();
+                                        //lcd_puts("White Led Turned On");
+                                        printf("White Led Turned On");
+                                    }    
+                                    else
+                                    {
+                                        if (strcmp(x,"TurnOnYellow") == 0)
+                                        {
+                                            RED = 0;
+                                            BLUE = 1;
+                                            GREEN = 0; 
+                                            //lcd_clear();
+                                            //lcd_puts("Yellow Led Turned On");
+                                            printf("Yellow Led Turned On");
+                                        }  
+                                        else
+                                        {
+                                            printf("Unknown Command");
+                                        }                                      
+                                    }                            
+                                }
+                            }                         
+                        }                    
+                    }               
+                }
+            }
+        }
+        
+        
+        
+      }
+}
