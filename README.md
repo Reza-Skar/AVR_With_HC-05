@@ -26,3 +26,35 @@ a AVR Project with HC-05 bluetooth module
 
 # Shematic
 <img src="https://github.com/Reza-Skar/AVR_With_HC-05/blob/main/images/Shematic.png?raw=true"/>
+
+ Contact-Us
+برای ارتباط با بنده میتوانید از راه های ارتباطی زیر استفاده کنید :
+
+Phone Number : +989228235272
+
+Telegram : @Rezaskar
+
+Whatsapp : +989228235272
+
+E-Mail : rsababkar@gmail.com
+
+تلگرام سریع تر پاسخ میدم.
+
+
+# Special Thanks To :
+
+DMF313.ir 👇
+[<img src="https://dmf313.ir/wp-content/uploads/2020/05/AdminAvatar.png" width="300"/>](https://dmf313.ir/)
+
+
+
+# Support-Us
+آدرس های ولت جهت حمایت های شما ( هیچ انتظاری از هیچ کس و هیچ اجباری و اصراری برای هیچ کسی نداریم و اگر از پروژه خوشتون اومد و دوست داشتید حمایت کنید هر چقدر دوست داشتید واریز کنید و حتما تو تلگرام بهم خبر بدید تا من بدونم چه کسی واریز کرده )
+
+USDT BEP20 : 0x0D9d976FB92C0045FA2f242Ab43e8842D8f117d8
+
+USDT ERC20 : 0x0D9d976FB92C0045FA2f242Ab43e8842D8f117d8
+
+USDT TRC20 : TKmT6nmCtEkGkgsjmXskTJtAdhDNpLkLHK
+
+USDT SPL : 4pBH2WYwBtjyCbVyUge3ZzYWfne61cRb4ddYnENUiYLC
